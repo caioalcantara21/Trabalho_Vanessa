@@ -91,7 +91,7 @@ nav ul li a:hover {
     margin: auto;
     text-decoration: none;
     box-shadow: 0 2px 8px rgba(52,152,219,0.08);
-    transition: background 0.2s;
+    transition background:0.2s;
     display: block
 }
 .cta-button:hover {
