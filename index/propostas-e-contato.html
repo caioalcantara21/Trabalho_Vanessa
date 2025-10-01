@@ -23,35 +23,52 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main-content">
         <section class="page-header">
             <h1>Nossas Propostas e Contato</h1>
-            <p>Juntos podemos transformar o futuro do trabalho.</p>
+            <p>Juntos, podemos transformar o futuro do trabalho.</p>
         </section>
 
-        <section class="propostas-contato-container">
-            <h2>Nossas Propostas</h2>
-            <p>Para atingir o Objetivo 8, é preciso um esforço conjunto. Nossas propostas de ação incluem:</p>
-            <ul>
-                <li>**Capacitação Profissional:** Oferecer cursos e treinamentos que alinham os jovens com as demandas do mercado.</li>
-                <li>**Promoção de Direitos:** Assegurar que os trabalhadores tenham direitos e segurança no emprego.</li>
-                <li>**Incentivo à Formalidade:** Apoiar a transição para empregos formais, garantindo benefícios e proteção social.</li>
-            </ul>
-        </section>
+        <section class="propostas-container">
+    <h2>Nossas Propostas</h2>
+    <div class="propostas-grid">
+        <div class="card-proposta">
+            <h3>Capacitação para o Mercado</h3>
+            <p>Promovemos programas de mentoria e workshops para jovens, focados em habilidades digitais e empreendedorismo.</p>
+        </div>
+        <div class="card-proposta">
+            <h3>Inclusão e Formalidade</h3>
+            <p>Lutamos pela formalização de empregos, garantindo a trabalhadores informais acesso a direitos e segurança social.</p>
+        </div>
+        <div class="card-proposta">
+            <h3>Conscientização e Direitos</h3>
+            <p>Educamos sobre a importância de combater o trabalho infantil e a escravidão moderna, empoderando a sociedade para defender seus direitos.</p>
+        </div>
+        <div class="card-proposta">
+            <h3>Consumo Consciente</h3>
+            <p>Incentivamos o apoio a empresas que valorizam o trabalho justo e o comércio local.</p>
+        </div>
+        <div class="card-proposta">
+            <h3>Diálogo e Parceria</h3>
+            <p>Incentivamos a comunicação aberta entre trabalhadores e empregadores, criando um ambiente de respeito e colaboração que resulta em melhores condições de trabalho.</p>
+        </div>
+        <div class="card-proposta">
+            <h3>Acesso a Serviços Financeiros</h3>
+            <p>Promovemos iniciativas que facilitam o acesso a serviços bancários para pequenas empresas e empreendedores, garantindo que o crescimento seja acessível a todos.</p>
+        </div>
+    </div>
+</section>
 
         <section class="contato-container">
             <h2>Entre em Contato</h2>
-            <p>Estamos prontos para ouvir sua história e suas ideias.</p>
+            <p>Estamos prontos para ouvir sua história e suas ideias. Envie uma mensagem e vamos construir um futuro melhor juntos.</p>
             <form class="form-contato">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
-
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required>
-
                 <label for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
                 <button type="submit" class="botao">Enviar</button>
             </form>
         </section>
@@ -61,5 +78,6 @@
         <p>&copy; 2025 Economia do Futuro. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="../js/script.js"></script>
 </body>
 </html>

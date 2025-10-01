@@ -550,5 +550,41 @@ main.main-content {
 .card-acao p {
     font-size: 1rem;
     margin: 0;
+}/* Adicione estas regras ao seu arquivo style.css */
+
+/* Estilo para a seção de propostas */
+.propostas-container {
+    padding: 60px 10%;
+    text-align: center;
 }
 
+.propostas-container h2 {
+    margin-bottom: 3rem;
+}
+
+.propostas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card-proposta {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.card-proposta:hover {
+    transform: translateY(-6px);
+}
+
+.card-proposta h3 {
+    color: #00e5ff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
