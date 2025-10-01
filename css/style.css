@@ -1,11 +1,11 @@
-/* ===== RESET GERAL ===== */
+/*RESET GERAL*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== ESTILOS BASE DO BODY ===== */
+/*ESTILOS BASE DO BODY*/
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: linear-gradient(135deg, #001f3f, #004d80); /* Gradiente de azul mais harmonioso */
@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* ===== TIPOGRAFIA GERAL ===== */
+/*TIPOGRAFIA GERAL*/
 h1, h2, h3, h4 {
   color: #00e5ff; /* Um azul turquesa vibrante para os títulos */
   font-weight: bold;
@@ -27,7 +27,7 @@ p {
   line-height: 1.8;
 }
 
-/* ===== COMPONENTE HEADER E NAV ===== */
+/*COMPONENTE HEADER E NAV*/
 header {
   display: flex;
   justify-content: space-between;
@@ -61,7 +61,7 @@ header {
 .menu a:hover,
 .menu a.ativo {
   color: #00e5ff;
-  border-bottom: 2px solid #00e5ff; /* Adiciona um traço embaixo do link ativo/hover */
+  border-bottom: 2px solid #00e5ff; /* Adiciona um traço embaixo do link ativo/hover, ANIMAÇÃO DAS ABAS (INÍCIO, QUEM-SOMOS, NOSSA-CAUSA, CONTATO) */
 }
 
 /* ===== BOTÕES E CTAS ===== */
@@ -85,7 +85,7 @@ header {
   transform: translateY(-3px) scale(1.02);
 }
 
-/* ===== SEÇÕES GERAIS ===== */
+/*SECTION*/
 main {
   padding: 0 10%;
 }
@@ -95,9 +95,9 @@ section {
   text-align: center;
 }
 
-/* ===== SEÇÃO HERO ===== */
+/* SECTION HERO */
 .hero {
-  height: 80vh; /* Ocupa 80% da altura da tela */
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -193,7 +193,7 @@ section {
 
 .card-noticia img {
   width: 100%;
-  height: 200px;
+  height: 350px;
   object-fit: cover;
 }
 
@@ -216,7 +216,7 @@ section {
   font-weight: bold;
 }
 
-/* ===== SEÇÃO METAS E CTA ===== */
+/*SEÇÃO METAS E CTA (BOTÃO)*/
 .metas-cta-container {
   display: flex;
   justify-content: space-around;
@@ -238,7 +238,7 @@ section {
   color: #00e5ff;
 }
 
-/* ===== PÁGINAS INTERNAS (Causa, Quem Somos, Contato) ===== */
+/*PÁGINAS INTERNAS (Causa, Quem Somos, Contato)*/
 .page-header {
   text-align: center;
   padding: 80px 0;
@@ -258,7 +258,7 @@ section {
   margin-bottom: 1.5rem;
 }
 
-/* ===== SEÇÃO DE EQUIPE (QUEM SOMOS) ===== */
+/*SECTION DE EQUIPE (QUEM SOMOS)*/
 .equipe-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -288,7 +288,7 @@ section {
   border: 4px solid #00e5ff;
 }
 
-/* ===== SEÇÃO DE PROJETOS (NOSSA CAUSA) ===== */
+/* SECTION DE NOSSA CAUSA */
 .projetos-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -317,7 +317,7 @@ section {
   margin-bottom: 1rem;
 }
 
-/* ===== SEÇÃO DE CONTATO ===== */
+/*ABA DE CONTATOS*/
 .form-contato {
   background: rgba(255,255,255,0.05);
   border-radius: 16px;
@@ -352,7 +352,7 @@ section {
   border-color: #fff;
 }
 
-/* ===== FOOTER ===== */
+/*RODAPÉ DA PÁGINA*/
 footer {
   background: #001f3f;
   text-align: center;
@@ -362,7 +362,7 @@ footer {
   color: #00e5ff;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+/* ===== DEIXA A PÁGINA RESPONSÍVEL */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -410,11 +410,11 @@ footer {
   }
 }
 main.main-content {
-    padding-top: 2rem; /* Adiciona um espaço para que o header fixo não cubra o conteúdo */
+    padding-top: 2rem; /* Adiciona um espaço para que o header fixo não fique cobrindo o conteúdo */
 }
 
-/* Modifique a regra do header */
-header {
+/* Caixas das fotos dos membros da equipe */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -425,3 +425,130 @@ header {
     z-index: 1000;
     backdrop-filter: blur(6px);
 } /* Reduzi o blur para melhorar a legibilidade */
+.membro-box {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo em coluna */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  height: 100%; /* Garante que todos os cards tenham a mesma altura */
+}
+
+.membro-box:hover {
+  transform: translateY(-6px);
+}
+
+.membro-box img {
+  width: 100%; /* A imagem ocupa 100% da largura do card */
+  height: 500px; /* Altura fixa para manter a proporção */
+  object-fit: cover; /* Recorta a imagem para cobrir o espaço, sem distorcer */
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 4px solid #00e5ff;
+}
+
+.membro-info {
+  width: 100%;
+  text-align: center;
+}
+
+.membro-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #00e5ff;
+}
+
+.membro-info p {
+  color: #ddd;
+  font-size: 0.95rem;
+  margin: 0;
+}
+/* A parte do Nossa Causa e ajustes */
+/* ===== SEÇÃO VISÃO GERAL ===== */
+.visão-geral {
+    padding: 60px 10%;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.visão-geral h2 {
+    color: #00e5ff;
+    text-align: center;
+}
+
+/* ===== SEÇÃO PROJETOS E MÉTRICAS ===== */
+.projetos-e-metricas, .como-ajudar {
+    padding: 60px 10%;
+}
+
+.projetos-cards, .metricas-cards, .acoes-cards {
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 2rem;
+}
+
+.card-projeto, .card-metrica, .card-acao {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card-projeto:hover, .card-metrica:hover, .card-acao:hover {
+    transform: translateY(-6px);
+}
+
+.card-projeto h3, .card-metrica h3 {
+    color: #00e5ff;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.card-projeto h3 i, .card-metrica h3 i {
+    color: #00e5ff;
+    margin-right: 0.5rem;
+}
+
+.card-metrica h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-metrica span {
+    display: block;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 1rem;
+}
+
+/* ===== SEÇÃO AÇÕES (COMO AJUDAR) ===== */
+.como-ajudar {
+    text-align: center;
+}
+
+.card-acao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-acao i {
+    font-size: 3rem;
+    color: #00e5ff;
+    margin-bottom: 1rem;
+}
+
+.card-acao p {
+    font-size: 1rem;
+    margin: 0;
+}
+
