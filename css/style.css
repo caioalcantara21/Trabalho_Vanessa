@@ -1,223 +1,427 @@
-/* Estilo profissional com azul claro, branco e tons suaves */
+/* ===== RESET GERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* ===== ESTILOS BASE DO BODY ===== */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #eaf6fb 0%, #cbe7fa 100%);
-    color: #234567;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #001f3f, #004d80); /* Gradiente de azul mais harmonioso */
+  color: #fff;
+  line-height: 1.6;
 }
 
+/* ===== TIPOGRAFIA GERAL ===== */
+h1, h2, h3, h4 {
+  color: #00e5ff; /* Um azul turquesa vibrante para os títulos */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #f0f0f0;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+/* ===== COMPONENTE HEADER E NAV ===== */
 header {
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px); /* Blur para um efeito de vidro fosco */
 }
 
-.logo {
-    background: #fff;
-    padding: 16px 32px;
-    border-radius: 0 0 32px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.logo-img {
-    max-width: 540px;
-    height: auto;
-    display: block;
+.logo img {
+  height: 80px; /* Reduzindo um pouco para melhor proporção */
 }
 
-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: transparent;
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 32px;
-    margin: 0;
-    padding: 16px 0 0 0;
-}
-nav ul li a {
-    text-decoration: none;
-    color: #3498db;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: color 0.2s;
-}
-nav ul li a:hover {
-    color: #217dbb;
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem; /* Aumentando o espaçamento entre os links */
 }
 
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 0.5rem 0;
+}
+
+.menu a:hover,
+.menu a.ativo {
+  color: #00e5ff;
+  border-bottom: 2px solid #00e5ff; /* Adiciona um traço embaixo do link ativo/hover */
+}
+
+/* ===== BOTÕES E CTAS ===== */
+.botao, button, input[type="submit"] {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: #00e5ff;
+  color: #001f3f;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.4);
+  border: none;
+  cursor: pointer;
+}
+
+.botao:hover, button:hover, input[type="submit"]:hover {
+  background: #fff;
+  color: #001f3f;
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* ===== SEÇÕES GERAIS ===== */
+main {
+  padding: 0 10%;
+}
+
+section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* ===== SEÇÃO HERO ===== */
 .hero {
-    text-align: center;
-    padding: 64px 16px 32px 16px;
-    background: rgba(255,255,255,0.7);
-    border-radius: 24px;
-    margin: 32px auto 24px auto;
-    max-width: 700px;
-    box-shadow: 0 4px 24px rgba(52,152,219,0.08);
+  height: 80vh; /* Ocupa 80% da altura da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .hero h1 {
-    color: #217dbb;
-    font-size: 2.2rem;
-    margin-bottom: 18px;
-    text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
+
 .hero p {
-    color: #234567;
-    font-size: 1.15rem;
-    margin-bottom: 24px;
-}
-.hero-img {
-    max-width: 340px;
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(52,152,219,0.10);
-    margin-bottom: 24px;
-}
-.cta-button {
-    background: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 24px;
-    padding: 14px 36px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-align: center;
-    margin: auto;
-    text-decoration: none;
-    box-shadow: 0 2px 8px rgba(52,152,219,0.08);
-    transition: background 0.2s;
-    display: block
-}
-.cta-button:hover {
-    background: #217dbb;
+  font-size: 1.2rem;
+  max-width: 600px;
 }
 
-.noticia-section {
-    background: #eaf6fb;
-    padding: 48px 0 32px 0;
-    border-radius: 24px;
-    margin: 32px auto;
-    max-width: 900px;
-    box-shadow: 0 2px 16px rgba(52,152,219,0.07);
-}
-.noticia-section h2 {
-    color: #217dbb;
-    text-align: center;
-    margin-bottom: 32px;
-    font-size: 1.7rem;
-}
-.noticia-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    justify-content: center;
-}
-.noticia-card {
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 2px 12px rgba(52,152,219,0.10);
-    padding: 24px 18px;
-    max-width: 270px;
-    flex: 1 1 270px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: box-shadow 0.2s;
-}
-.noticia-card:hover {
-    box-shadow: 0 6px 24px rgba(52,152,219,0.18);
-}
-.noticia-img {
-    max-width: 220px;
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 18px;
-    box-shadow: 0 2px 8px rgba(52,152,219,0.10);
-}
-.noticia-card h3 {
-    color: #217dbb;
-    font-size: 1.15rem;
-    margin-bottom: 10px;
-    text-align: center;
-}
-.noticia-card p {
-    color: #234567;
-    font-size: 1rem;
-    margin-bottom: 12px;
-    text-align: center;
-}
-.leia-mais {
-    color: #217dbb;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.2s;
-    border: #ffffff;
-    border-radius: 10px;
-    padding: 8px 16px;
-    box-shadow: 0 2px 8px rgba(52,152,219
-}
-.leia-mais:hover {
-    color: #217dbb;
+/* ===== SEÇÃO MISSÃO E CARDS ===== */
+.missao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  margin-top: -40px; /* Sobrepõe o gradiente para um efeito de profundidade */
+  padding: 4rem;
 }
 
-.nossa-missao {
-    background: #fff;
-    border-radius: 24px;
-    box-shadow: 0 2px 16px rgba(52,152,219,0.07);
-    padding: 40px 24px;
-    max-width: 700px;
-    margin: 32px auto;
-    text-align: center;
-}
-.nossa-missao h2 {
-    color: #217dbb;
-    font-size: 1.4rem;
-    margin-bottom: 18px;
-}
-.nossa-missao p {
-    color: #234567;
-    font-size: 1.08rem;
-    margin-bottom: 18px;
+.missao-text {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
 }
 
+.missao-banner img {
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.missao-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 4rem;
+}
+
+.missao-card {
+  flex: 1 1 250px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  text-decoration: none;
+  color: #fff;
+}
+
+.missao-card h3 {
+  color: #00e5ff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== SEÇÃO CONTEÚDOS E NOTÍCIAS ===== */
+.conteudos {
+  text-align: center;
+}
+
+.conteudos h2 {
+  margin-bottom: 3rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card-noticia {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: left;
+}
+
+.card-noticia:hover {
+  transform: translateY(-6px);
+}
+
+.card-noticia img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-noticia h3 {
+  padding: 1rem 1rem 0.5rem;
+  margin-bottom: 0;
+}
+
+.card-noticia p {
+  padding: 0 1rem;
+  font-size: 0.95rem;
+}
+
+.card-noticia .mais {
+  display: block;
+  padding: 1rem;
+  text-align: right;
+  color: #00e5ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== SEÇÃO METAS E CTA ===== */
+.metas-cta-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 4rem;
+  margin-top: 40px;
+}
+
+.metas, .cta {
+  flex: 1;
+  max-width: 450px;
+  text-align: center;
+}
+
+.metas h2, .cta h2 {
+  font-size: 2rem;
+  color: #00e5ff;
+}
+
+/* ===== PÁGINAS INTERNAS (Causa, Quem Somos, Contato) ===== */
+.page-header {
+  text-align: center;
+  padding: 80px 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 2px solid #00e5ff;
+}
+
+.sobre, .causa-container, .propostas-contato-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.sobre h2, .causa-container h2, .propostas-contato-container h2 {
+  color: #00e5ff;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== SEÇÃO DE EQUIPE (QUEM SOMOS) ===== */
+.equipe-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.membro-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.membro-card:hover {
+  transform: translateY(-6px);
+}
+
+.membro-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #00e5ff;
+}
+
+/* ===== SEÇÃO DE PROJETOS (NOSSA CAUSA) ===== */
+.projetos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card-projeto {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.card-projeto:hover {
+  transform: translateY(-6px);
+}
+
+.card-projeto img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* ===== SEÇÃO DE CONTATO ===== */
+.form-contato {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-contato label {
+  font-weight: bold;
+  color: #00e5ff;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #00e5ff;
+  background: rgba(0,0,0,0.2);
+  color: #fff;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+/* ===== FOOTER ===== */
 footer {
-    background: #3498db;
-    color: #fff;
-    text-align: center;
-    padding: 18px 0;
-    border-radius: 24px 24px 0 0;
-    margin-top: 32px;
-    font-size: 1rem;
-    box-shadow: 0 -2px 12px rgba(52,152,219,0.10);
+  background: #001f3f;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #00e5ff;
 }
 
-h2, h3 {
-    font-family: 'Segoe UI', Arial, sans-serif;
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem 5%;
+  }
+
+  .menu ul {
+    margin-top: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section {
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .missao {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .missao-text {
     text-align: center;
-    color: #217dbb;
+  }
+
+  .missao-banner img {
+    max-width: 90%;
+  }
+
+  .missao-cards-container {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  
+  .metas-cta-container {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
 }
-@media (max-width: 900px) {
-    .noticia-container {
-        flex-direction: column;
-        gap: 24px;
-    }
-    .noticia-card {
-        max-width: 100%;
-    }
-    .hero {
-        max-width: 100%;
-    }
-    .nossa-missao {
-        max-width: 100%;
-    }
-    .noticias-section {
-        max-width: 100%;
-    }
+main.main-content {
+    padding-top: 2rem; /* Adiciona um espaço para que o header fixo não cubra o conteúdo */
 }
+
+/* Modifique a regra do header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+} /* Reduzi o blur para melhorar a legibilidade */
