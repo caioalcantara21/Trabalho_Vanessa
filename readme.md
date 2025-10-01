@@ -55,4 +55,4 @@ Este projeto foi desenvolvido por um grupo de estudantes da **Faculdade UniNassa
 | Caio Cézar Alcântara | Análise e Desenvolvimento de Sistemas | 01841899 |
 | Julliano Cesar | Análise e Desenvolvimento de Sistemas | 01838684 |
 | Gustavo Santana | Análise e Desenvolvimento de Sistemas | 01847511 |
-| Raphael Jorge | Análise e Desenvolvimento de Sistemas | 2025123459 |
+| Raphael Jorge | Análise e Desenvolvimento de Sistemas | 01841018 |
