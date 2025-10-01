@@ -9,9 +9,12 @@ body {
 }
 
 header {
-    background: #fff;
+    background: #ffffff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     padding: 0;
+    max-width: 3000px;
+    height: 400px;
+    display: block;
 }
 
 .logo {
@@ -23,7 +26,7 @@ header {
     justify-content: center;
 }
 .logo-img {
-    max-width: 540px;
+    max-width: 300px;
     height: auto;
     display: block;
 }
@@ -91,7 +94,7 @@ nav ul li a:hover {
     margin: auto;
     text-decoration: none;
     box-shadow: 0 2px 8px rgba(52,152,219,0.08);
-    transition: background-color 0.2s ease;
+    transition background-color:0.2s ease;
     display:block
 }
 .cta-button:hover {
